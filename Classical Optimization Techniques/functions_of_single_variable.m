@@ -1,25 +1,41 @@
+% Define symbolic variable x as real
 syms x 'real'
 
-f1 = x^3 - 6*x^2 + 9*x + 1;  % Define the function
+% Define the function f1(x)
+f1 = x^3 - 6*x^2 + 9*x + 1;
 
-f_x = diff(f1,x);    % Find first order derivative of f
-sol = solve(f_x == 0, x);    % Solve f(x)=0
+% Find the first-order derivative of f1
+f_x = diff(f1, x);
 
-f_x2 = diff(f_x,x);  % Find 2nd order derivative of f
+% Solve for critical points by setting the first-order derivative to zero
+sol = solve(f_x == 0, x);
 
-n = size(sol,1);    % To check the number of critical points
-for i = 1:1:n       % Calculate 2nd order derivative for each critical points
-    val = subs(f_x2, x, sol(i));    % Substitute critical points in 2nd order derivative
-    val_f1 = subs(f1, x, sol(i));   % Substitute critical points in function to find max/min
+% Find the second-order derivative of f1
+f_x2 = diff(f_x, x);
+
+% To check the number of critical points
+n = size(sol, 1);
+
+% Loop through each critical point
+for i = 1:n
+    % Calculate the second-order derivative for each critical point
+    val = subs(f_x2, x, sol(i));
+    
+    % Substitute critical points in the function to find max/min
+    val_f1 = subs(f1, x, sol(i));
+    
+    % Determine the nature of the critical point and print the result
     if val > 0
-        fprintf('%f is local minima ', sol(i))
-        fprintf('and minimum value is %f\n', val_f1)
+        fprintf('%f is a local minimum, and the minimum value is %f\n', sol(i), val_f1)
     elseif val < 0
-        fprintf('%f is local maxima ', sol(i))
-        fprintf('and maximum value is %f\n', val_f1)
+        fprintf('%f is a local maximum, and the maximum value is %f\n', sol(i), val_f1)
     else
         fprintf('%f is a point of inflection\n', sol(i))
     end
 end
 
-fplot(f1)   % Plot the function for verification
+% Plot the function for verification
+fplot(f1)
+xlabel('x');
+ylabel('f1(x)');
+title('Plot of the Function f1(x)');
