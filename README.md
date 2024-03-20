@@ -1,6 +1,6 @@
 # Nonlinear Programming Repository
 
-Welcome to the Nonlinear Programming (NLP) repository! This GitHub repository will be gradually updated with MATLAB code implementations for various NLP problems. The repository covers deduction and solving of Karush-Kuhn-Tucker (KKT) conditions, optimization algorithms, genetic algorithm operations, exterior penalty function method, feasible direction method and interior penalty function method.
+Welcome to the Nonlinear Programming repository! This GitHub repository will be gradually updated with MATLAB code implementations for various NLP problems. The repository covers deduction and solving of Karush-Kuhn-Tucker (KKT) conditions, optimization algorithms, genetic algorithm operations, exterior penalty function method, feasible direction method and interior penalty function method.
 
 ## Methods Implemented
 
