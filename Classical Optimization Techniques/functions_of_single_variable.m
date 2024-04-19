@@ -36,6 +36,6 @@ end
 
 % Plot the function for verification
 fplot(f1)
-xlabel('x');
+xlabel('x-axis');
 ylabel('f1(x)');
 title('Plot of the Function f1(x)');
