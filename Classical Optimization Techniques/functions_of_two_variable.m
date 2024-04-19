@@ -69,6 +69,6 @@ mesh(x_mesh, y_mesh, z_mesh);
 
 % Add title and axis labels to the plot
 title('Mesh Plot of the Function');
-xlabel('x');
-ylabel('y');
+xlabel('x-axis');
+ylabel('y-axis');
 zlabel('f(x, y)');
