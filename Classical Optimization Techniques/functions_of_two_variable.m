@@ -51,10 +51,6 @@ for i = 1:n
     end
 end
 
-% Plot the function
-
-% Plot the function
-
 % Convert symbolic expression to a function handle
 f_handle = matlabFunction(f, 'Vars', [x, y]);
 
