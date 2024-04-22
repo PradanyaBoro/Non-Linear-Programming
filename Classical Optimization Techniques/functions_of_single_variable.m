@@ -1,4 +1,4 @@
-% Define symbolic variable x as real
+% Define symbolic variable
 syms x 'real'
 
 % Define the function f1(x)
