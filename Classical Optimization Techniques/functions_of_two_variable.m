@@ -62,7 +62,6 @@ figure;
                             linspace(min(extrema_y), max(extrema_y), 100));
 z_mesh = f_handle(x_mesh, y_mesh);
 mesh(x_mesh, y_mesh, z_mesh);
-
 % Add title and axis labels to the plot
 title('Mesh Plot of the Function');
 xlabel('x-axis');
