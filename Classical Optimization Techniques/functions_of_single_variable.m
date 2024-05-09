@@ -33,7 +33,6 @@ for i = 1:n
         fprintf('%f is a point of inflection\n', sol(i))
     end
 end
-
 % Plot the function for verification
 fplot(f1)
 xlabel('x-axis');
